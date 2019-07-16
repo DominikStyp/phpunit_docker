@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  phpunit:
+    #build: ./php7-testing-phpunit
+    build:
+      context: ./php7-testing-phpunit
+      dockerfile: Dockerfile
+    volumes:
+      - ./tests:/app/tests:cached
+      - ./vendor:/tmp/vendor_mapped:cached
