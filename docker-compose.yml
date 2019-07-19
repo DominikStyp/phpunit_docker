@@ -5,6 +5,7 @@ services:
     build:
       context: ./php7-testing-phpunit
       dockerfile: Dockerfile
+    image: dominikstyp/phpunit_php7
     volumes:
       - ./tests:/app/tests:cached
       - ./vendor:/tmp/vendor_mapped:cached
